@@ -1,0 +1,301 @@
+/* COMMON */
+.inner{
+    max-width: 1300px;
+    margin: 0 auto;
+    position: relative;
+}
+a{
+    display: inline-block;
+    text-decoration: none;
+}
+.btn{
+    background-color: #4b79ee;
+    border-radius: 8px;
+    padding: 10px 22px;
+    color: #fff;
+}
+/* HEAD */
+#head_layout {
+    position: fixed;
+    z-index: 10;
+    left: 0;
+    right: 0;
+    top: 0;
+    border-bottom: 1px solid #d6dce3;
+    
+}
+/* HEAD */
+@media (min-width:1025px){   
+
+#head_layout .inner{
+    height: 100px;
+}
+#head_layout .inner .logo{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    left: 0;
+    height: fit-content; /* 요소 안에 있는 내용만큼 높이 값을 지정 */
+}
+#head_layout .inner .logo img{}
+
+/* UTIL MENU */
+#head_layout .inner .util-menu{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    display: flex;
+    align-items: center;
+}
+#head_layout .inner .util-menu a{
+    height: fit-content;
+}
+#head_layout .inner .util-menu a.icon{
+    padding: 12px 5px;
+}
+#head_layout .inner .util-menu a.btn{
+    color: #fff;
+    
+}
+#head_layout .inner .util-menu a span{}
+
+#head_layout .inner .main-menu{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;  /* 위에서부터 정렬 */
+    
+}
+#head_layout .inner .main-menu > li{
+    cursor: pointer;
+}
+#head_layout .inner .main-menu > li:hover .main-menu-name{
+    color: #4b79ee;
+}
+#head_layout .inner .main-menu .main-menu-name{
+    font-size: 18px;
+    font-weight: 700;
+    height: 100px;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    
+}
+#head_layout .inner .main-menu .sub-menu{
+    padding-top: 30px;
+    display: none;
+    position: relative;
+    z-index: 9;
+}
+#head_layout .inner .main-menu .sub-menu a{
+    padding: 12px 20px;
+}
+#head_layout .inner .main-menu .sub-menu a:hover{
+    color: #4b79ee;
+}
+#head_layout .inner .main-menu:hover .sub-menu
+,#head_layout .inner .main-menu.on .sub-menu{
+    display: block;
+}
+#head_layout .inner .menu-bg{
+    /* background-color: palegreen; */
+    position: fixed;
+    top: 101px;
+    left: 0;
+    right: 0;
+    z-index: 8;
+    height: 0px;
+    overflow: hidden;
+    box-shadow: 0px 1px 2px 0px #8080807d;
+}
+/* hover */
+#head_layout .inner .menu-bg.on{
+    
+    height: 400px;
+}
+
+#head_layout .inner .menu-bg .mypage-box{
+    position: absolute;
+    right: 0;
+    top: 30px;
+    z-index: 9;
+    border-left: 1px solid #d6dce3;
+    padding-left: 50px;
+}
+#head_layout .inner .menu-bg .mypage-box .mypage-title{
+    font-size: 20px;
+    
+}
+#head_layout .inner .menu-bg .mypage-box .mypage li{
+    padding: 12px 20px 12px 0;
+}
+#head_layout .inner .menu-bg .menu-text{
+    position: absolute;
+    top: 30px;
+    left: 0;
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 1.3em;
+}
+#head_layout .inner .menu-bg .menu-text em{
+    color: #4b79ee;
+}
+#head_layout .inner .mobile-menu{
+    display: none;
+}
+#head_layout .inner .mobile-box .mobile-btn{
+    display: none;
+}
+}
+
+@media (min-width:1025px) and (max-width:1300px){
+    #head_layout .inner{
+        width: 98%;
+        margin: 0 auto;
+    }
+    #head_layout .inner .menu-bg .mypage-box{
+        right: 0;
+        padding-left: 20px;
+    }
+    #head_layout .inner .menu-bg .menu-text{
+        font-size: 20px; 
+    }   
+}
+/* mobile */
+@media (max-width:1024px){
+    #head_layout{
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 10;
+        background-color: #fff;
+        border-bottom: 1px solid #eee;
+    }
+    #head_layout .inner{
+        height: 70px;        
+    }
+    #head_layout .inner .logo{
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        width: fit-content;
+        height: fit-content;
+    }
+    #head_layout .inner .util-menu .search,
+    #head_layout .inner .util-menu .btn{
+        display: none;
+    }    
+    #head_layout .inner .util-menu{
+        display: flex;
+        height: 100%;
+        align-items: center;
+        justify-content: flex-end;
+        margin-right: 20px;
+    }
+    #head_layout .inner .util-menu > a{
+        padding: 15px 5px;
+        color: #222;
+    }    
+    #head_layout .inner .mobile-menu{
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        margin: auto;
+        width: fit-content; 
+        height: fit-content;
+        color: #222;
+    }
+    #head_layout .inner .mobile-box{
+        background-color: #242f78;
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 11;
+        overflow-y: scroll;
+        padding-top: 9vw;
+        transform: translateX(-100%);
+        transition: transform 0.4s;
+    }
+    #head_layout .inner .mobile-box.show{
+        transform: translateX(0);
+    }
+    #head_layout .inner .mobile-box .main-menu-name,
+    #head_layout .inner .mobile-box .mypage-title,
+    #head_layout .inner .mobile-box .login{
+        background-color: #34429c;
+        color: #fff;
+        padding: 3vw 5vw;
+        font-size: 3vw;
+        font-weight: 700;
+        display: block;
+    }
+    #head_layout .inner .mobile-box .sub-menu li a,
+    #head_layout .inner .mobile-box .mypage li a{
+        background-color: #242f78;
+        color: #fff;
+        padding: 3.5vw 7vw;
+        font-size: 2.5vw;
+        display: block;
+    }
+    #head_layout .inner .mobile-box .mobile-btn{
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: fit-content;
+
+    }
+    #head_layout .inner .mobile-box .mobile-btn .close{
+        position: absolute;
+        top: 5px;
+        right: 10px;
+        padding: 12px;
+        color: #fff;
+    }
+    #head_layout .inner .mobile-box .menu-text{
+        display:none;
+    }
+}
+/* samsung note and iphone max*/
+@media(min-width:371px) and (max-width:480px){
+    #head_layout .inner .mobile-box{
+        padding-top: 9vw;
+    }
+    #head_layout .inner .mobile-box .main-menu-name,
+    #head_layout .inner .mobile-box .mypage-title{
+        padding: 4.5vw 4vw;
+        font-size: 5vw;
+    }
+    #head_layout .inner .mobile-box .sub-menu li a,
+    #head_layout .inner .mobile-box .mypage li a{
+        padding: 4.5vw 7vw;
+        font-size: 5vw;
+    }
+}
+/*tablet*/
+@media(min-width:769px) and (max-width:1200px){
+    #head_layout .inner .mobile-box{
+        padding-top: 9vw;
+    }
+
+    #head_layout .inner .mobile-box .main-menu-name,
+    #head_layout .inner .mobile-box .mypage-title{
+        font-size: 18px;
+        padding: 20px 40px;
+    }
+    #head_layout .inner .mobile-box .sub-menu li a,
+    #head_layout .inner .mobile-box .mypage li a{
+        padding: 20px 55px;
+        font-size: 16px;
+
+    }
+}

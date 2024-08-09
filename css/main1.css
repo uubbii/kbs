@@ -1,0 +1,214 @@
+/* main.css */
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+body{
+    font-family: 'Pretendard-Regular';
+    color: #222;
+    font-size: 16px;
+    font-weight: 400;
+
+}
+.inner{
+    max-width: 1200px;
+    position: relative;
+    margin: 0 auto;
+}
+img{
+    display: block;
+}
+a{
+    display: block;
+    text-decoration: none;
+}
+.btn{
+    background-color: #4b79ee;
+    color: #fff;
+    padding: 10px 22px;
+    border-radius: 5px;
+}
+/* HEAD */
+#head_layout{
+    /* background-color: paleturquoise; */
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 10;
+    background-color: #fff;
+}
+#head_layout .inner{
+    /* background-color: palevioletred; */
+    height: 100px;
+}
+#head_layout .inner .logo a{
+    padding: 10px 0;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    height: fit-content;
+}
+#head_layout .inner .logo a img{
+    width: 200px;
+}
+#head_layout .inner .main-menu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid #667284;
+
+}
+#head_layout .inner .main-menu > li{
+    position: relative;
+}
+#head_layout .inner .main-menu > li .main-menu-name{
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center ;
+}
+#head_layout .inner .main-menu > li .main-menu-name a{
+    width: 100%;
+    padding: 30px 15px;
+    font-size: 20px;
+    font-weight: 700;
+    color: #222;
+}
+
+#head_layout .inner .main-menu > li .sub-menu{
+    position: absolute;
+    top: 150px;
+    left: 0;
+    z-index: 9;
+    display: none;
+}
+#head_layout .inner:hover .main-menu > li .sub-menu{
+    display: block;
+}
+#head_layout .inner .main-menu > li .sub-menu li{
+    padding: 12px 15px;
+    font-size: 18px;
+    color: #667284;
+}
+#head_layout .inner .util-menu{
+    position: absolute;
+    top:0;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#head_layout .inner .util-menu span{
+    font-size: 30px;
+    font-weight: 400;
+    padding: 15px 5px;
+    color: #3e3e3e;
+}
+#head_layout .inner .util-menu .btn {
+    margin-left: 20px;
+}
+
+#head_layout .inner .menu-bg{
+    background-color: #fff;
+    position: fixed;
+    top: 100px;
+    left: 0;
+    right: 0;
+    height: 500px;
+    box-shadow: 0px 3px 4px 1px #607d8b29;
+    z-index: 8;
+    display: none;
+}
+#head_layout:hover .inner .menu-bg{
+    display: block;
+}
+#head_layout .inner .menu-bg .inner{
+    padding-top: 50px ;
+}
+#head_layout .inner .menu-bg .mypage-box{
+    /* display: none; */
+    position: absolute;
+    right: 0;
+    padding-left: 50px;
+    border-left: 3px solid #d6dce3;
+    font-size: 20px;   
+     
+}
+#head_layout .inner .menu-bg .mypage-box .mypage-title{
+    margin: 15px;
+    box-sizing: border-box;
+    font-weight: 700;
+    display: block;
+}
+#head_layout .inner .menu-bg .mypage-box a{ 
+    padding: 15px;
+    font-size: 18px;
+    color: #667284;
+}
+#head_layout .inner .menu-bg .menu-text{
+    /* display: none; */
+    font-size: 25px;
+    line-height: 1.5em;
+} 
+#head_layout .inner .menu-bg .menu-text em{
+    font-weight: 700;
+    color: #4b79ee;
+}
+
+#body_layout{
+    margin-top: 100px;
+    height: 3000px;
+    position: relative;
+    overflow: hidden;
+}
+#body_layout .main-banner .banner-img img{
+    position: absolute;
+    top: 0;
+    max-width: none;
+    left: 50%;
+    height: 660px;
+    transform: translateX(-50%);
+
+}
+#body_layout .main-banner .inner .banner-box{
+    position: absolute;
+    width: 560px;
+    height: 238px;
+    padding: 80px;
+    top: 110px;
+}
+#body_layout .main-banner .inner .banner-box h1{
+    color: #fff;
+    font-size: 50px;
+    font-weight: bold;
+    
+}
+#body_layout .main-banner .inner .banner-box p{
+    color: #fff;
+    font-size: 25px;
+    padding: 20px 0px 20px 0px;
+}
+#body_layout .main-banner .inner .banner-box a{
+    width: 174px;
+    height: 26px;
+    padding: 17px 0;
+    text-align: center;
+    font-size: 20px;
+}
+#body_layout .main-content{
+    position: absolute;
+    background-color: #f6f8fb;
+    height: 267px;
+    width: 100%;
+    margin-top: 660px;
+}
+#body_layout .main-course{
+    background-color: #667284;
+    height: 625px;
+}
